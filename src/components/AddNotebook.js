@@ -21,14 +21,14 @@ const AddNotebook = () => {
   return (
     <div className="new-note">
       <div className="header">
-        <h3>Add Notebook</h3>
+        <h3>Thêm Ghi Chú</h3>
         <CloseIcon onClick={() => dispatch(closeNotebookModal())} />
       </div>
 
       <div className="content">
         <input
           type="text"
-          placeholder="GraphQL"
+          placeholder="Lập trình căn bản..."
           onKeyDown={addNotebookHandler}
         />
       </div>

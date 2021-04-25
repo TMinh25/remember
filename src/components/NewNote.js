@@ -38,14 +38,14 @@ const NewNote = () => {
   return (
     <div className="new-note">
       <div className="header">
-        <h3>New Note</h3>
+        <h3>Ghi Chú Mới</h3>
         <CloseIcon onClick={closeNoteModalHandler} />
       </div>
 
       <div className="content">
         <input
           type="text"
-          placeholder="State Management"
+          placeholder="Lập trình JS..."
           onKeyDown={addNoteHandler}
         />
       </div>

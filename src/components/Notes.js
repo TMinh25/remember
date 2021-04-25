@@ -30,7 +30,7 @@ const Notes = () => {
       <div className="search-notes">
         <input
           type="text"
-          placeholder="search notes"
+          placeholder="Tìm kiếm..."
           onChange={searchNotesHandler}
         />
       </div>

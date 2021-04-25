@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Modal from "./Modal";
 import AddNotebook from "./AddNotebook";
 import NewNote from "./NewNote";
-import { NotebookIcon, PencilIcon } from "./Icons";
+import { NotebookIcon, PlusIcon } from "./Icons";
 import { getNotebooks } from "../reducers/notebooks";
 import { getNotes } from "../reducers/notes";
 import { getNote } from "../reducers/note";
@@ -57,7 +57,7 @@ const Sidebar = () => {
             >
               <span onClick={() => getNotesHandler(notebook)}>{notebook}</span>{" "}
               {selectedNotebook === notebook && (
-                <PencilIcon onClick={() => dispatch(openNoteModal())} />
+                <PlusIcon onClick={() => dispatch(openNoteModal())} />
               )}
             </li>
 
@@ -87,7 +87,7 @@ const Sidebar = () => {
         onClick={() => dispatch(openNotebookModal())}
       >
         <NotebookIcon />
-        <span>Notebook</span>
+        <span>Ghi Chú</span>
       </div>
 
       {notebookModal && (

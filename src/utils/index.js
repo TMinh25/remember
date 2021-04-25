@@ -17,8 +17,9 @@ export const createNewNote = (title) => {
 };
 
 export const uploadImage = async (file) => {
+  console.log(process.env.REACT_APP_DATABASE_URL);
   const formData = new FormData();
-  formData.append("upload_preset", "not_a_notion_clone");
+  formData.append("upload_preset", "gray_upload_preset");
   formData.append("file", file);
 
   const options = {
@@ -26,8 +27,13 @@ export const uploadImage = async (file) => {
     body: formData,
   };
 
-  const response = await fetch(process.env.REACT_APP_UPLOAD_IMAGE_URL, options);
+  // const response = await fetch(process.env.REACT_APP_UPLOAD_IMAGE_URL, options);
+  const response = await fetch(
+    "https://api.cloudinary.com/v1_1/gr4y/image/upload",
+    options
+  );
   const data = await response.json();
+  console.log(data);
   return {
     success: 1,
     file: {

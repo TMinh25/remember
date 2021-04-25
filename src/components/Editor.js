@@ -96,7 +96,7 @@ const Editor = () => {
       {note.id && (
         <div className="save-options">
           <button className="app-btn" onClick={saveNoteHandler}>
-            Save
+            Lưu
           </button>
 
           <OptionsIcon onClick={() => dispatch(openOptionsModal())} />

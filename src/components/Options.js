@@ -20,18 +20,18 @@ const Options = ({ deleteNoteHandler }) => {
   return (
     <div className="options">
       <div className="header">
-        <h3>Options</h3>
+        <h3>Tùy Chọn</h3>
         <CloseIcon onClick={() => dispatch(closeOptionsModal())} />
       </div>
 
       <div className="action" onClick={deleteNoteHandler}>
         <DeleteIcon />
-        <span>Delete</span>
+        <span>Xóa Ghi Chú</span>
       </div>
 
       <div className="action" onClick={downloadAsPdfHandler}>
         <DownloadIcon />
-        <span>Export to PDF</span>
+        <span>Xuất File PDF</span>
       </div>
     </div>
   );
